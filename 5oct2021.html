@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+
+    </script>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        // 1. Function Defination 
+        // Proper Naming convention
+        // i.e Function Names are alway in camleCase
+        function myFunctionD(x, y) { // x and y are fromal arguments/parameter
+
+            return x + y; //40
+
+        }
+
+        // 2 . Function Calling
+
+        let result = myFunctionD(10, 30);// 40
+
+        console.log(result);
+
+        // Function as Argument
+
+        let r2 = myFunctionD(10, myFunctionD(10, myFunctionD(10, 10)));
+
+        console.log(r2);
+
+        // ************************
+
+        function a() {
+            return 10;
+        }
+        function b() {
+            return 20;
+        }
+        function c(x, y) {
+            return x + y;
+        }
+
+        //function as a argument
+        let z = c(a(), b());
+
+        console.log(z);
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
