@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Object</title>
+</head>
+
+<body>
+
+
+    <script>
+        let x = {
+            //Members
+            //1.Property:value
+            //2.Functions
+
+            name: "OKLABS",
+            surname: 'DOLLOR',
+
+            myFuncA: function () {// formal arguments
+                // function Defination
+                //Function Body
+
+
+                //console.log(this.);// this =self = current objec
+                //object.member
+                //this is current object
+                console.log('my name is ' + this.name);
+            },
+            myFunB: () => {
+
+            },
+            myFuncC: function () {
+
+            }
+
+        };//x is an JS Object
+
+
+        //object.member
+        // console.log(x.name);
+        console.log(x.myFuncA());
+
+
+
+
+
+        // let y = {
+        //     //1. Property:value
+        //     name: "Anil",
+        //     address: "Neemuch MP INDIA",
+        //     "friends": ['A', "B", "C", "D"],
+        // }
+
+        // console.log(y);
+
+        // for (i = 0; i < y.length; i++) {
+        //     console.log("this is my friends " + y[i])
+        // }
+        // ++++++++++++++++++++++++++++++++++++++
+        let y = [{
+            //1. Property:value
+            name: "Anil",
+            address: "Neemuch MP INDIA",
+            "friends": ['A', "B", "C", "D"],
+        }];
+
+        let z = ['A', "B", "C", "D", ...y]
+
+        z.forEach(element => {
+            console.log("my Friend is " + element);
+        });
+
+
+
+        let teachers = ['AA', "BB", "CC"];
+
+        /* for (Singlualar of plural){
+            //code block to be executed
+            
+        }
+        */
+
+        for (varivable of iterbled) {
+            //code block to be executed
+        }
+
+
+        for (teacher of teachers) {
+            console.log(teacher);
+            // code block to be  executed
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
