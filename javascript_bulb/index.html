@@ -10,6 +10,17 @@
             background-color: black;
 
         }
+
+        .center {
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .button_size {
+            width: 200px;
+            height: 50px;
+        }
     </style>
 
 
@@ -47,16 +58,16 @@
 
 <body>
 
+    <div class=" center">
+
+        <p> <img id="myimg" src="img/bulb1.png" width="200" alt=""></p>
 
 
-    <img id="myimg" src="img/bulb1.png" width="200" alt="">
 
+        <button class="button_size" onclick="clickMe('on')">ON</button>
+        <button class="button_size" onclick="clickMe('off')">OFF</button>
 
-
-    <button onclick="clickMe('on')">ON</button>
-    <button onclick="clickMe('off')">OFF</button>
-
-
+    </div>
 
 </body>
 
