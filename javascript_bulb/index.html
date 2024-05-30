@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+
+        }
+    </style>
+
+
+    <script>
+
+        //1. Function Defination
+        function clickMe(state) {//state is a formal argument /parameter
+            //alert ('ok');
+            //object.member.member.member
+
+            if (state == 'on') {
+                document.body.style.backgroundColor = "yellow";
+                // object.member
+
+                // object.function();
+                // object.method();
+                document.getElementById('myimg').setAttribute('src', 'img/bulb2.png')
+            }
+            else {
+                document.body.style.backgroundColor = "black";
+                document.getElementById('myimg').setAttribute('src', 'img/bulb1.png')
+            }
+
+
+        }
+
+
+
+
+    </script>
+
+
+
+</head>
+
+<body>
+
+
+
+    <img id="myimg" src="img/bulb1.png" width="200" alt="">
+
+
+
+    <button onclick="clickMe('on')">ON</button>
+    <button onclick="clickMe('off')">OFF</button>
+
+
+
+</body>
+
+</html>
