@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Fan On Off Effect</title>
+
+    <style>
+        div[data-anil="myfanbox"] {
+            /* border: 1px dashed black; */
+        }
+
+        .FanBox {
+            width: 300px;
+            height: 300px;
+            background-image: url("img/fan-blades-png.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 100px auto;
+            animation-name: fan;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-play-state: paused;
+        }
+
+        @keyframes fan {
+            0% {
+                transform: rotatez(0deg);
+            }
+
+            100% {
+                transform: rotateZ(359deg);
+            }
+        }
+    </style>
+
+    <script>
+        // 1. Function Defination
+        function stopFan(s) { // s is Formal Argument/Parameter
+            //function body
+
+
+
+        }
+
+        function x(elem) {
+            //function 
+
+
+            //function is reuturning somothing
+            return document.querySelector(elem);
+        }
+
+        // 1 function defination
+        function startFan(speed) { // speed is formal arg/params
+
+            //we have to check some condition
+            // if else else if ... else ladder
+
+            if (speed == 0) {
+
+
+                x('.FanBox').style.animationPlayState = 'paused';
+
+
+            }
+
+            else if (speed == 1) {
+
+
+                //Testing
+                // alert('1');
+                x('.FanBox').style.animationDuration = '1s';
+                x('#fanboxx').style.animationPlayState = 'running';
+            }
+            else if (speed == 2) {
+
+
+                // alert('2');
+                //object.method()
+                x('[data-anil="myfanbox"]').style.animationDuration = '0.5s';
+                x('[data-anil="myfanbox"]').style.animationPlayState = 'running';
+            }
+            else {
+                //alert('3')
+                //object.member
+                //object.method()
+                document.getElementById('fanboxx').style.animationPlayState = 'running';
+
+                document.getElementById('fanboxx').style.animationDuration = '0.1s';
+
+            }
+
+
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <div class="FanBox" id="fanboxx" data-anil="myfanbox">
+
+    </div>
+    <div style="text-align: center;">
+
+        <button onclick="startFan(0)">Stop</button>
+        <button onclick="startFan(1)">1</button>
+        <button onclick="startFan(2)">2</button>
+        <button onclick="startFan(3)">3</button>
+
+    </div>
+
+</body>
+
+</html>
