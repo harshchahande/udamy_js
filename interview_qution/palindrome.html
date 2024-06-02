@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        //1.function defination
+        function checkForPalindrom(n) {
+            // alert(n);
+
+            // for (var i = 0; i < n.length; i++) {
+            //     console.log(n.charAt(i));
+            // }
+            // =======================
+
+            var isPalindro = false;
+
+            for (var j = (n.length - 1); j >= 0; j--) {
+                console.log(n.charAt(j));
+
+                for (var i = 0; i < n.length; i++) {
+                    console.log(n.charAt(i));
+
+
+                    if (n.charAt(j) == n.charAt(i)) {
+                        isPalindro = true;
+                    }
+                    else {
+                        isPalindro = false;
+                    }
+
+
+                }
+
+            }
+            if (isPalindro == true) {
+                alert(n + " is a palindrome number");
+            } else {
+                alert(n + " is not a palindrome number")
+            }
+
+        }
+        let number = prompt("please enter the number to check if it is palindrome or not");
+
+
+        //conver the string to number
+        // number = parseInt(number);//
+        // number = parseFloat(number);
+        // **
+        //string In number--->parseInt --> Integer
+        // '6336'+10==> 633610
+        // pareInt ('6336') => 6336 + 10 =>6346
+        // **
+        // alert(number + 50)
+        checkForPalindrom(number)
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
