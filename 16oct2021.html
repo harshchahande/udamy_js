@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesss form element</title>
+</head>
+
+<body>
+
+    <!-- onsubmit event only use in form -->
+    <form action="" onsubmit=" return submitForm()">
+
+        <input id="n1" type="txet" name="num1" placeholder="Enter the value">
+
+        <input data-n2="n2" type="txet" name="num2" placeholder="Enter the value">
+
+        <input data-n2="n3" type="txet" name="num2" placeholder="Enter the value">
+
+        <input type="submit" value="submit">
+
+    </form>
+    <br>
+    <br><br>
+    <hr>
+    <br>
+
+    <!-- ********************************* -->
+
+    <!-- <form action="">
+        <input type="txet" placeholder="Enter the value">
+        <button type="submit">submit</button>
+
+    </form> -->
+
+
+
+
+
+
+
+
+    <script>
+
+        // Alway load js at the bottom to apear you website is loading faster
+
+        //function defination 
+        function submitForm() { // formal argument and / parameter
+            //function body
+            let number1 = document.getElementById("n1").value;
+
+            let number2 = document.querySelector('[data-n2="n2"]').value;
+
+            alert('hii' + number1)
+            alert('by' + number2)
+
+            var result = parseInt(number1) + parseInt(number2)
+
+            alert(result)
+            // Now save this result in local storage so that we can access later 
+
+            //object.method()
+
+            localStorage.setItem('result', result);// we are passing two actual argument are string
+
+            // A function may retune somthing
+
+            return false;
+        }
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
