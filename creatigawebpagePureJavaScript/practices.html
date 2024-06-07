@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practices only javascript</title>
+    <style>
+        #n {
+            width: 500px;
+            height: 300px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body id="body1">
+
+
+
+
+
+
+    <script>
+
+        // create in new element is hear
+
+        var h = document.createElement("header");
+
+
+        console.log(h)
+        h.innerHTML = "header";
+
+        p = document.getElementById('body1').appendChild(h);
+        console.log(p);
+
+        document.querySelector('header').setAttribute('class', 'hader_2');
+
+        var x = document.querySelector('.hader_2');
+
+        console.log(x)
+
+        x.style.backgroundColor = "yellow";
+        x.style.height = "100px";
+        x.style.textAlign = "center";
+        x.style.lineHeight = "100px";
+
+        // ************************* header end*****************
+
+        // ***********Aside ************* section **************Aside************
+
+        var a1 = document.createElement('aside');
+        console.log(a1);
+
+        a1.innerHTML = "aside";
+
+
+        document.getElementById('body1').appendChild(a1);
+
+
+        var section = document.createElement('section');
+
+        console.log(section);
+
+        section.innerHTML = "section";
+
+        document.getElementById('body1').appendChild(section);
+
+
+        a2 = document.createElement('aside');
+
+        console.log(a2)
+
+        a2.innerHTML = "Aside2";
+
+        document.getElementById('body1').appendChild(a2);
+
+
+        // document.querySelectorAll('aside').style.display = 'inline-block';
+
+
+        var arr = document.querySelectorAll('aside');
+
+        console.log(arr);
+
+        arr.forEach(function (currentValue, index, arr) {
+            arr[index].style.display = "inline-block";
+        })
+
+
+        // arr.forEach(function (currentValue, index, arr) {
+        //     arr[index].style.display = 'inline-block';
+
+        // })
+
+
+        document.querySelector('section').setAttribute('class', 'se1')
+
+
+        var sec1 = document.getElementsByClassName('se1');
+
+        sec1[0].style.display = "inline-block";
+        sec1[0].style.width = "30%"
+        sec1[0].style.backgroundColor = "blue";
+        sec1[0].style.textAlign = "center";
+
+        console.log(sec1)
+
+        document.querySelector('aside').setAttribute('class', 'a1');
+
+        a1 = document.getElementsByClassName('a1');
+
+        console.log(a1);
+
+
+
+
+        a1[0].style.width = "30%";
+        a1[0].style.height = "100px"
+        a1[0].style.textAlign = "center";
+        a1[0].style.lineHeight = "100px"
+        a1[0].style.backgroundColor = "pink";
+
+
+
+
+        document.querySelector("aside").setAttribute("class", "a2");
+
+        var a2 = document.getElementsByClassName('a2');
+
+
+
+        console.log(a2);
+        // ************************************** footer ***********************************
+
+
+
+
+        var f = document.createElement("footer");
+
+        console.log(f)
+
+        f.innerHTML = "footer";
+
+        document.getElementById('body1').appendChild(f);
+
+        document.querySelector('footer').setAttribute('class', 'f1');
+
+        var f1 = document.querySelector('.f1');
+
+        f1.style.width = "100%";
+        f1.style.height = "100px";
+        f1.style.textAlign = "center";
+        f1.style.lineHeight = "100px";
+        f1.style.backgroundColor = "green";
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

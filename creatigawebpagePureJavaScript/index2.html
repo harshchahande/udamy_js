@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Lecture thumbnail
+        1:19 / 33:08
+        70. Lecture 68 Javascript - Create a Web Page using pure JS</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+    <script>
+
+
+
+        var h = document.createElement("header");
+
+        // added attribute
+        h.setAttribute('class', 'hader1');
+
+        // ======================
+
+        console.log(h)
+
+        document.body.appendChild(h);
+        h.innerHTML = "header"
+
+        m = document.createElement("div");
+        m.innerHTML = "div"
+        document.body.appendChild(m);
+
+
+        // added class attribute 
+        // m.setAttribute("class", "main");
+
+        document.querySelector("header.hader1 ~ div").setAttribute('class', 'a_main')
+
+
+        var x = document.getElementsByClassName('a_main');
+        console.log(x[0]);
+
+        x[0].style.color = "red";
+
+        console.log(m)
+        // *********************************
+
+        f = document.createElement("footer");
+        console.log(f)
+        document.body.appendChild(f)
+
+        document.querySelector('div ~ footer').innerHTML = "footer";
+        // ****************************
+        // ==================
+
+
+        // Event  Handelers
+
+        // we will attract the event listiner
+
+        // element.addEventListener(event,function,useCapture)
+
+        var b = document.createElement("button");
+        b.innerHTML = "button";
+        console.log(b);
+
+        document.body.appendChild(b);
+
+        var be = document.getElementsByTagName('button');
+        console.log(be)
+        /*
+        element.addEventListener(event,fuction,useCapture)
+        */
+        be[0].addEventListener('click', function () {
+            // alert("hii my name is hars");
+
+            f.style.color = "yellow";
+            h.style.color = "blue";
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

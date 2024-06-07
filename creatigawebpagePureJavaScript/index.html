@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Web Page using pure JS</title>
+</head>
+
+<body id="a_body">
+
+
+
+
+    <script>
+        //1.create a header element /tag using JS
+        var h = document.createElement('header');
+        h.innerHTML = 'Header';
+        console.log(h)
+
+        // 2. Now Tell the JS to place this header element inside body tag
+        document.getElementById('a_body').appendChild(h);
+
+
+        document.querySelector('header').setAttribute('class', 'a_header');
+
+        // object.member
+        document.body.style.margin = '0px';
+
+        var x = document.getElementsByClassName('a_header');
+
+
+        // console.log(x[0]);
+        x[0].style.width = '100%';
+        x[0].style.height = '150%';
+        x[0].style.border = '5px solid #ddd';
+
+
+        var x = document.getElementsByTagName('header');
+
+
+        // console.log(x[0]);
+        x[0].style.color = 'green';
+        x[0].style.fontSize = '3em';
+        x[0].style.textAlign = 'center';
+        x[0].style.lineHeight = '150px';
+
+        // ************ footer ************
+        let f = document.createElement('footer');
+        f.innerHTML = "footer"
+        let n = document.createElement('nav');
+        console.log(f);
+
+
+
+        var aside1 = document.createElement('aside');
+        aside1.innerHTML = "aside1"
+        var section = document.createElement('section');
+        section.innerHTML = "section";
+        var aside2 = document.createElement('aside');
+        aside2.innerHTML = 'Aside2'
+
+
+
+
+        document.body.appendChild(aside1);
+
+        document.body.appendChild(section);
+        document.body.appendChild(aside2);
+
+
+        // document.querySelectorAll('aside').style.display = 'inline-block';
+        var arr = document.querySelectorAll('aside');
+        console.log(arr);
+        arr.forEach(function (currentValue, index, arr) {
+            arr[index].style.display = 'inline-block';
+        })
+
+
+
+        document.querySelector('section').style.display = 'inline-block';
+
+
+
+        document.body.appendChild(n);
+        document.body.appendChild(f);
+
+        var x = document.querySelectorAll('footer');
+
+
+        //  console.log 
+        // element.setAttribut ("attributeName","attributeValue");
+
+
+        x[0].setAttribute('data-foot', 'foot1');
+
+
+        document.querySelector('footer[data-foot="foot1"]').style.textAlign = "center";
+
+        document.querySelector('[data-foot="foot1"]').style.color = 'green';
+
+        document.querySelector('[data-foot]').style.lineHeight = '150px';
+
+
+        var f1 = document.querySelector('footer');
+
+        f1.style.width = '100%';
+        f1.style.height = '150px';
+        f1.style.border = '5px solid #333';
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

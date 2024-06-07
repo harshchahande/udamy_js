@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+
+    <!--  javasScript -->
+
+    <!--1. Hoisting -->
+    <!--2. classList -->
+    <!--3. HTML DOM Element appendChild() -->
+
+
+    <!-- node is tags -->
+
+
+
+
+    <script>
+        /*JavaScript Hoisting
+=
+         Hoisting is JavaScript's default behavior of moving declarations to the top.
+
+
+
+JavaScript Declarations are Hoisted
+In JavaScript, a variable can be declared after it has been used.
+
+In other words; a variable can be used before it has been declared.
+
+            Example 1 gives the same result as Example 2:
+
+
+x = 5; // Assign 5 to x
+
+elem = document.getElementById("demo"); // Find an element
+elem.innerHTML = x;                     // Display x in the element
+
+var x; // Declare x
+
+*/
+
+        // *********************************************
+        // Let create a i tag
+        // 2. Variable Initialization
+
+        i = document.createElement('i');
+        i.setAttribute('class', 'fas');
+        console.log(i);
+
+        document.body.appendChild(i);
+
+        // let create a script tag
+        var l = document.createElement("link");
+
+
+        l.setAttribute("rel", "stylesheet");
+        l.setAttribute('href', ' https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css')
+
+
+        document.head.appendChild(l);
+        // ********************************************
+        // JS Hoisting
+        // You can Declerate the Variable After the initialization
+
+        // 1 Variable Decleration
+
+        var i;
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

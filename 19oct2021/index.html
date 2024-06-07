@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>j</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anta&family=Average&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fira+Code:wght@300..700&family=Krona+One&family=Merriweather:ital,wght@0,700;1,400&family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Serif:ital,wght@0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sixtyfour&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #1D1D1D;
+            padding: 100PX 200PX;
+
+        }
+
+        .myspan {
+            font-size: 6em;
+            font-family: "Roboto", sans-serif Helvetica,
+                sans-serif;
+            font-weight: 900;
+            color: #FFF;
+
+        }
+
+        .myspan>span:first-child {
+            color: #FD2155;
+
+            text-shadow: -9px 0px 0px #05FDD8;
+        }
+
+        .myspan>span:not(.myspan > span:first-child):hover {
+            /* STATE 2 */
+            color: #05FDD8;
+            /* transform: scale(2, 2); */
+            animation-play-state: running;
+
+
+        }
+
+        .myspan span {
+            /* STATE 1 */
+            float: left;
+            transition: all 0.4s linear;
+            /* transform: scale(1, 1); */
+        }
+
+        .myspan>span:not(.myspan > span:first-child) {
+            /* STATE -2 */
+            /* transform: scale(1, 1);
+             */
+
+            animation-name: anim;
+            animation-timing-function: cubic-bezier(0, .86, 1, -1.25);
+            animation-iteration-count: 1;
+            animation-play-state: paused;
+
+            animation-duration: 1s;
+        }
+
+        @keyframes anim {
+            0% {
+                transform: scale(1, 1);
+            }
+
+            25% {
+                transform: scale(1.5, 0.5);
+            }
+
+            50% {
+                transform: scale(0.5, 1.5);
+            }
+
+            75% {
+                transform: scale(1.75, 0.25);
+            }
+
+            100% {
+                transform: scale(1, 1);
+            }
+        }
+
+        .myimg {}
+    </style>
+
+</head>
+
+<body>
+
+
+    <img class="myimg" src="img/familytree.gif" width="50px" alt="">
+    <span class="myspan">
+        <span>J</span>
+        <span>a</span>
+        <span>c</span>
+        <span>k</span>
+
+    </span>
+
+</body>
+
+</html>
