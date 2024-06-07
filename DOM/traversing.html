@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranversing/Search UP/Down</title>
+</head>
+
+<body>
+
+    <!-- JS DOM -->
+    <!-- traversing Down -->
+
+    <!-- Parent Tag -> Child Tag -->
+
+    <!-- <div class="p">
+        <div class="c"></div>
+    </div> -->
+
+
+    <!-- 
+    Traversing Up
+    Child Tag -> Parent Tag -->
+
+
+    <!-- Method -->
+
+    <!-- 1.Closest -->
+    <!-- ******************************* -->
+    <!-- 
+    The closest() method searches up the DOM tree for elements which matches a specified CSS selector.
+
+    The closest() method starts at the element itself, then the anchestors (parent, grandparent, ...) until a match is found.
+    
+    The closest() method returns null() if no match is found. -->
+    <!-- ******************************* -->
+
+    <!-- definition and usege -->
+    <!-- 
+    the closest() method searches up the DOM tree for the closest element which matches a specified CSS selector. It
+    starts at the element itself , then test the parent , grandparent , and so on until a match is found. if a match is
+    not found , this method returns null. -->
+
+
+    <!-- ***=****=**=*************=*********==** -->
+
+
+
+    <div class="gp" id="grandparent">
+        grandparent
+        <div class="p">
+            parent
+            <div class="c">
+                Child
+                <div class="gc gc1">
+                    grand Child
+                </div>
+                <div class="gc gc1">
+                    grand Child
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // =========== traversing up ==================
+
+        // ********************* Me ******************
+        // var a = document.getElementById('i');
+        // console.log(a)
+        // var b = a.closest('.c');
+        // b.style.color = "red";
+
+        // if (b) {
+        //     b.style.backgroundColor = "yellow";
+        // }
+        // ********************* end ******************
+        // ********************* sir ******************
+
+        // gc = document.querySelector('div.gc')
+        // console.log(gc);
+
+        // gc.closest('div.gp').style.border = '1px solid red';
+
+        // gc.closest('.p').style.border = '1px solid blue'
+        // gc.closest('.c').style.border = '1px solid green'
+
+        // var gc;
+
+        // ********************* end ******************
+        // =========== traversing down ==================
+
+        // *****************************
+
+
+        p = document.getElementById('grandparent');
+
+        console.log(p);
+
+
+        arr = p.querySelectorAll('.gc');
+
+        console.log(arr);
+
+        arr.forEach(function (currentElement, index, arr) {
+            currentElement.style.color = "Orange";
+            console.log(currentElement);
+        });
+
+        // p.querySelectorAll('.gc').style.color = 'orange';
+
+
+
+        // JS HOISTING
+
+        var p;
+        var arr;
+
+
+
+
+
+
+        // ********************  End *********************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
