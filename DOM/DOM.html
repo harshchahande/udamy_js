@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <!-- Create a Unordered List with pure JS -->
+
+    <!-- () have the higest priority -->
+    <!-- ******************************* -->
+    <!-- classList is an object{
+     
+    
+    1.p:v;
+    2. methode
+    
+    } -->
+
+    <!-- I want to iterate / Loop over an object; -->
+
+    <!-- uses for in loop 
+    for(key in object){
+    code block to be executed
+    }
+-->
+    <!-- ****************************************** -->
+
+    <!-- how to access the value of a properties 
+    there are 3 ways 
+    
+    1. objectName.property
+    2.ObjectName["Property"];
+    3.ObjectName[expression];
+    
+    -->
+    <!-- *************************** -->
+    <!-- What is this ?
+this is a reference to the  current object {}
+
+-->
+    <script>
+        // lets create the parent Elemnet
+        u = document.createElement('ul');
+        console.log(u);
+
+        for (let i = 0; i < 10; i++) {
+            var li = document.createElement('li');
+            // ****************************************
+            // class adde there is two way to add class
+
+            li.setAttribute('class', "a_li com");
+
+            li.classList.add('common');
+
+
+
+
+            // ****************************
+            // li.innerHTML = ' Hello';
+            var tn = document.createTextNode('Hello' + (i + 1));
+            li.appendChild(tn)
+
+            console.log(li);
+
+
+
+            u.appendChild(li);
+        }
+
+        document.body.append(u);
+
+
+
+        var u;
+
+
+        var object = document.getElementsByClassName('common');
+
+        console.log(object)
+
+        console.log(typeof object)
+
+        for (let p in object) {
+
+            console.log(p);
+            console.log(!isNaN(p));
+            if (!isNaN(p) && p < 3 || (p > 6)) {
+                console.log(object[p]);
+                object[p].style.color = 'red';
+            }
+
+
+
+
+        }
+
+
+
+        // *************
+
+        var o1 = {
+
+            /*
+            1. p:v
+            2. Method
+            
+            */
+            'name': 'Anil',
+            'surname': 'Dolor',
+            mission: "To Education Students",
+            getFullName: function () {
+                // to return something
+
+                return this.name + " " + this.surname;
+
+            },
+
+            getMisson: function () { //ES6 Fat Arrow Functionn
+
+                return this.mission;
+
+            }
+        };
+
+        //  . DOT is a member selector operator
+
+        //How to access the properties of JS Object 
+
+        //1.Object.property name
+
+
+        console.log(o1.name);
+
+        // 2. Object["property"]
+
+        console.log(o1["surname"]);
+
+        let m = 'mission';
+
+
+        // 3. object[expression]
+
+        console.log(o1[m]);
+
+
+        console.log(o1.getFullName());
+        console.log(o1.getMisson());
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
