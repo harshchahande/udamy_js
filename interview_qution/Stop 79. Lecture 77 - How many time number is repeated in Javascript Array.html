@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+
+        var obj = {
+
+        };//JS Object
+
+        //to add new property
+        //object.newpropety
+        // obj.name = 'Anil';
+        // //obj['newproperty']
+        // obj["surname"] = "DOLLOR";
+
+        // var mission = 'mission';
+        // obj[mission] = 'Education';
+
+        // console.log(obj)
+
+
+
+        var arr = [1, 2, 3, 2, 3, 3, 4, 1, 55, 6, 5, 6, 5, 3, 54, 5, 0, 7, 9, 7,];
+
+
+        // arr.forEach(element => { // Far Arrow Function Notation ES6
+        //     console.log(element)
+        // })
+
+        arr.forEach(function (currentValue, index, arr) {// Formal Argument
+            console.log(currentValue);
+
+            if (Object.keys(obj).length === 0) {
+                // console.log('Empty');
+                obj[currentValue] = 1;
+
+            } else {
+                // console.log('not Empty');
+                //1. let check if the currentValue is present in the object property
+                for (var key in obj) {
+                    // console.log('key',key)
+                    key = parseInt(key)
+                    // console.log('key', typeof key);
+
+                    // console.log('currentValue', typeof currentValue);
+
+                    // typeof currentValue
+                    if (key == currentValue) {
+                        // console.log('ok');
+                        obj[key] = obj[key] + 1;
+
+
+                    }
+                    if (!obj.hasOwnProperty(currentValue)) {
+                        obj[currentValue] = 1;
+                    }
+
+
+                }
+            }
+
+
+
+        });
+
+
+        console.log(obj);
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
