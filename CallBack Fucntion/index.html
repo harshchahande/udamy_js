@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="" id="myText"></div>
+    <div class="" id="myText2"></div>
+
+    <script>
+        var t = document.getElementById("myText");
+        var t2 = document.getElementById("myText2")
+        //1.function defination
+        function getName(name, mycbfb) { //Name is formal argument
+            //define the prototype
+            //cbfn = callbackfunction
+            console.log('Hello', name);
+            t.innHTML = 'Hello,' + name;
+            //function returning something
+            mycbfb('hello, ' + name)
+
+            return 'hello, ' + name;
+        }
+
+        // 2.Function calling
+        // getName('Anil'); // 'Anil' is actual argument
+        var x = getName('Anil', function (response) {
+            console.log('response from cbfn', response);
+        }); //'Anil id actual argument'
+
+
+
+        t2.innerHTML = x;
+    </script>
+
+
+    <script>
+        function getSomeData(obj, cbfn) {//prototype
+
+            cbfn(obj);
+        }
+
+        getSomeData({ name: "Anil", company: "OKLABS" }, function (response) {
+            console.log(response)
+        })
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
